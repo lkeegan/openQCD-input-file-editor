@@ -527,14 +527,8 @@ class MainGUI(QtGui.QWidget):
             
    def help(self):
       #load pdf documentation file with system default program
-      fname="parms.pdf"
+      fname="doc/parms.pdf"
       webbrowser.open(fname)
-#      if sys.platform.startswith('darwin'):
-#         ret = subprocess.call(['open', fname])
-#      elif sys.platform.startswith('win'):
-#         ret = os.startfile(os.path.normpath(fname))
-#      else:
-#         ret = subprocess.call(['xdg-open', fname])
 
 if __name__ == "__main__":
   app = QtGui.QApplication(sys.argv)
