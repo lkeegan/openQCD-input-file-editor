@@ -1,0 +1,2353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1181</width>
+    <height>878</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>openQCD Input File Editor</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_18">
+     <item>
+      <widget class="QTabWidget" name="tabMain">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="tabLattice">
+        <attribute name="title">
+         <string>Lattice Params</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string> Run Parameters</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QFormLayout" name="formLayout">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_12">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Run name:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="Run_name____name">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>default</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_2">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Gauge action c_0:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="Lattice_parameters____c0">
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>1.0 [Wilson plaquette]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1.6666667 [Tree-level Symanzik Improved]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>3.648 [Iwasaki]</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_4">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Beta:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="Lattice_parameters____beta">
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>6.00</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="lbl0_17">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Trajectory Length:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="Trajectory_length____tau">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>3.00</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="lbl0_19">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Thermalisation Trajectories:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="MD_trajectories____nth">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>320</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="lbl0_20">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Total Trajectories:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="MD_trajectories____ntr">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>3200</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="lbl0_25">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Log every:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLineEdit" name="MD_trajectories____dtr_log">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="lbl0_26">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Measure every:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QLineEdit" name="MD_trajectories____dtr_ms">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="lbl0_27">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Save config every:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QLineEdit" name="MD_trajectories____dtr_cnfg">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>20</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="lbl0_34">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Kappa values:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QLineEdit" name="Lattice_parameters____kappa">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0.160 0.165</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="lbl0_59">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Twisted mass values:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
+               <widget class="QLineEdit" name="HMC_parameters____mu">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0.1 0.2</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>Boundary Conditions</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <layout class="QFormLayout" name="formLayout_7">
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_6">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Boundary Conditions:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="Boundary_conditions____type">
+                <property name="currentIndex">
+                 <number>2</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>0 [Open]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1 [Schrodinger Functional]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>2 [Open--Schrodinger Functional]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>3 [Periodic]</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <layout class="QFormLayout" name="formLayout_10">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                </property>
+                <property name="labelAlignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="formAlignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                </property>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lbl0_79">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>cG:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="Boundary_conditions____cG">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.0</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="lbl0_80">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>cF:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="Boundary_conditions____cF">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.0</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="lbl0_81">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>phi:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="Boundary_conditions____phi">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.57 0.00</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="lbl0_82">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>t=0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QFormLayout" name="formLayout_8">
+                <property name="labelAlignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="formAlignment">
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                </property>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lbl0_39">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>cG':</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="Boundary_conditions____cGprime">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.0</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="lbl0_40">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>cF':</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="lbl0_41">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>phi':</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="Boundary_conditions____cFprime">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.0</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="Boundary_conditions____phiprime">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.57 0.00</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="lbl0_78">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>t=T</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabOther">
+        <attribute name="title">
+         <string>Other Params</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QGroupBox" name="groupDir">
+           <property name="title">
+            <string>Directories</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <layout class="QFormLayout" name="formLayout_3">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_5">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Log dir:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="Directories____log_dir">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>log</string>
+                </property>
+                <property name="maxLength">
+                 <number>32767</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_9">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Data dir:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Directories____dat_dir">
+                <property name="text">
+                 <string>dat</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_10">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Loc dir:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="lbl0_11">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Cnfg dir:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="Directories____loc_dir">
+                <property name="text">
+                 <string>loc</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="Directories____cnfg_dir">
+                <property name="text">
+                 <string>cnfg</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>Random number generator</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <layout class="QFormLayout" name="formLayout_4">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_13">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Level:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="Random_number_generator____level">
+                <item>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>1</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_14">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Seed:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Random_number_generator____seed">
+                <property name="text">
+                 <string>73099</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>Wilson Flow Measurements</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <layout class="QFormLayout" name="formLayout_6">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_21">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Integrator:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="Wilson_flow____integrator">
+                <property name="currentIndex">
+                 <number>2</number>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>EULER [1st order Euler]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>RK2 [2nd order Runge-Kutta]</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>RK3 [3rd order Runge-Kutta]</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_22">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Epsilon:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Wilson_flow____eps">
+                <property name="text">
+                 <string>0.01</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_23">
+                <property name="toolTip">
+                 <string>Number of integration steps per trajectory</string>
+                </property>
+                <property name="text">
+                 <string>Steps:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="Wilson_flow____nstep">
+                <property name="text">
+                 <string>100</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="lbl0_24">
+                <property name="toolTip">
+                 <string>Number of integration steps per trajectory</string>
+                </property>
+                <property name="text">
+                 <string>Measure every:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="Wilson_flow____dnms">
+                <property name="text">
+                 <string>10</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabSolvers">
+        <attribute name="title">
+         <string>Solvers</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_19">
+         <item>
+          <widget class="QGroupBox" name="groupBox_8">
+           <property name="title">
+            <string>Solvers</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QListWidget" name="listSolvers">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::ActionsContextMenu</enum>
+              </property>
+              <property name="dragEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::DragDrop</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btnAddSolver">
+                <property name="text">
+                 <string>Add Solver</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnRemoveSolver">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Remove Solver</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <item>
+            <widget class="QGroupBox" name="groupSolver">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="title">
+              <string>Solver Parameters</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <layout class="QFormLayout" name="formLayout_2">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                </property>
+                <property name="labelAlignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="verticalSpacing">
+                 <number>6</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lbl0_15">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Solver Index:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLabel" name="lblSolverIndex">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="lbl0_3">
+                  <property name="toolTip">
+                   <string>can put some relevant info about gauge actions here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Solver:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QComboBox" name="Solver____solver">
+                  <property name="currentIndex">
+                   <number>2</number>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>CGNE</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>MSCG</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>SAP_GCR</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>DFL_SAP_GCR</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="lblSolvernmx">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Max CG Iterations/Krylov vectors:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="Solver____nmx">
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>128</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="lbl0_18">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Max Relative Residue:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="Solver____res">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>1.e-10</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="lbl0_30">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Max Krylov vectors before restart:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLineEdit" name="Solver____nkv">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>24</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="lbl0_31">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Block Solver:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QComboBox" name="Solver____isolv">
+                  <item>
+                   <property name="text">
+                    <string>0 [plain MinRes]</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>1 [eo-preconditioned MinRes]</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="lbl0_32">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Block Solver Iterations:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QLineEdit" name="Solver____nmr">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>4</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="lbl0_33">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>Number of SAP cycles:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLineEdit" name="Solver____ncy">
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>4</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupSolver_2">
+             <property name="title">
+              <string>SAP blocksize</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <item>
+               <layout class="QFormLayout" name="formLayout_16">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                </property>
+                <property name="labelAlignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="verticalSpacing">
+                 <number>6</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="lblSolvernmx_3">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>SAP block size (L0 L1 L2 L3):</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="SAP____bs">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>false</bool>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhNone</set>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string>4 4 4 4</string>
+                  </property>
+                  <property name="maxLength">
+                   <number>15</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabRAT">
+        <attribute name="title">
+         <string>Rational Approxs</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QGroupBox" name="groupBox_11">
+           <property name="title">
+            <string>Rational Approximations</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QListWidget" name="listRAT">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::ActionsContextMenu</enum>
+              </property>
+              <property name="dragEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::DragDrop</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btnAddRAT">
+                <property name="text">
+                 <string>Add Rational Approx</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnRemoveRAT">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Remove Rational Approx</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupRAT">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="title">
+            <string>Rational Approximation Parameters</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_12">
+            <item>
+             <layout class="QFormLayout" name="formLayout_12">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_16">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Rational Approximation Index:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="lblRATIndex">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lblSolvernmx_2">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Degree:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Rational____degree">
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>10</string>
+                </property>
+                <property name="maxLength">
+                 <number>15</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_29">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Range (lower upper):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="Rational____range">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>1.e-3 6.10</string>
+                </property>
+                <property name="maxLength">
+                 <number>15</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabDeflation">
+        <attribute name="title">
+         <string>Deflation</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <widget class="QGroupBox" name="groupDFLsubspace">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="title">
+            <string>Deflation Subspace</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <layout class="QFormLayout" name="formLayout_13">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_55">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Block size (L0 L1 L2 L3):</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace____bs">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4 4 4 4</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_8">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Modes per block:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace____Ns">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>20</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_68">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Kappa:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace_generation____kappa">
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0.135</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="lbl0_69">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Twisted Mass:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace_generation____mu">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0.01</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="lbl0_70">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Number of inverse iterations:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace_generation____ninv">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>9</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="lbl0_83">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Block solver iterations:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace_generation____nmr">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="lbl0_84">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>SAP cycles:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QLineEdit" name="Deflation_subspace_generation____ncy">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupDFLprojection">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="title">
+            <string>Deflation Projection</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <layout class="QFormLayout" name="formLayout_14">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_85">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Max Krylov vectors before restart:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="Deflation_projection____nkv">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>24</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_86">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Max total Krylov vectors:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Deflation_projection____nmx">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>256</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_87">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Max relative residue:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="Deflation_projection____res">
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>1.0e-2</string>
+                </property>
+                <property name="maxLength">
+                 <number>128</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupDFLupdate">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="title">
+            <string>Deflation Update Scheme</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <layout class="QFormLayout" name="formLayout_15">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_88">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Update interval:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="Deflation_update_scheme____dtau">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>0.091</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_89">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Smoothing steps:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="Deflation_update_scheme____nsm">
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+                <property name="maxLength">
+                 <number>256</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabAction">
+        <attribute name="title">
+         <string>Action</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QGroupBox" name="groupBox_10">
+           <property name="title">
+            <string>Fermion Actions</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QListWidget" name="listActions">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::ActionsContextMenu</enum>
+              </property>
+              <property name="dragEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::DragDrop</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="btnAddAction">
+                <property name="text">
+                 <string>Add Action</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnRemoveAction">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="text">
+                 <string>Remove Action</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupAction">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="title">
+            <string>Action Parameters</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <layout class="QFormLayout" name="formLayout_11">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <property name="labelAlignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="lbl0_28">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Action Index:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="lblActionIndex">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="lbl0_7">
+                <property name="toolTip">
+                 <string>can put some relevant info about gauge actions here...</string>
+                </property>
+                <property name="text">
+                 <string>Action:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QComboBox" name="Action____action">
+                <item>
+                 <property name="text">
+                  <string>ACF_TM1</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ACF_TM2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ACF_TM1_EO_SDET</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ACF_TM2_EO</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ACF_RAT</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ACF_RAT_SDET</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="lbl0_56">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Kappa:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QComboBox" name="Action____im0"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="lbl0_57">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Twisted mu_0:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QComboBox" name="Action____imuX0"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="lbl0_60">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Solver mu_0:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QComboBox" name="Action____ispX0"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="lbl0_58">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Twisted mu_1:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QComboBox" name="Action____imuX1"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="lbl0_61">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Solver mu_1:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QComboBox" name="Action____ispX1"/>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="lbl0_62">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Rational Approx:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QComboBox" name="Action____iratX0"/>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="lbl0_63">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Rational Poles:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="lbl0_65">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>from</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="Action____iratX1"/>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lbl0_64">
+                  <property name="toolTip">
+                   <string>can put some relevant info about beta here...</string>
+                  </property>
+                  <property name="text">
+                   <string>to</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="Action____iratX2"/>
+                </item>
+               </layout>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="lbl0_66">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Force Solver:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QComboBox" name="Force____isp"/>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="lbl0_67">
+                <property name="toolTip">
+                 <string>can put some relevant info about beta here...</string>
+                </property>
+                <property name="text">
+                 <string>Extrap previous solutions: </string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
+               <widget class="QLineEdit" name="Force____ncr">
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="inputMask">
+                 <string/>
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+                <property name="maxLength">
+                 <number>15</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabMDint">
+        <attribute name="title">
+         <string>MD Integration</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="0">
+            <widget class="QLabel" name="lbl0_35">
+             <property name="toolTip">
+              <string>can put some relevant info about beta here...</string>
+             </property>
+             <property name="text">
+              <string>Integrator:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="lbl0_38">
+             <property name="toolTip">
+              <string>Number of integration steps per trajectory</string>
+             </property>
+             <property name="text">
+              <string>Forces:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="lbl0_37">
+             <property name="toolTip">
+              <string>Number of integration steps per trajectory</string>
+             </property>
+             <property name="text">
+              <string>Steps:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="lbl0_36">
+             <property name="toolTip">
+              <string>can put some relevant info about gauge actions here...</string>
+             </property>
+             <property name="text">
+              <string>Lambda:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Integration Level:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btnAddIntLevel">
+             <property name="text">
+              <string>Add Integration Level</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnRemoveIntLevel">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Remove Integration Level</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tabInputFile">
+        <attribute name="title">
+         <string>Input File Preview</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item>
+          <widget class="QPlainTextEdit" name="txtInputFile">
+           <property name="acceptDrops">
+            <bool>false</bool>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="tabStopWidth">
+            <number>50</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupSort">
+           <property name="title">
+            <string>Ordering of sections</string>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QRadioButton" name="radioSortDefault">
+              <property name="text">
+               <string>Default</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioSortAlpha">
+              <property name="text">
+               <string>Alphabetical</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="radioSortOriginal">
+              <property name="text">
+               <string>Preserve Original</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnOpen">
+       <property name="text">
+        <string>&amp;Open Input file... (ctrl+O)</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+O</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSave">
+       <property name="text">
+        <string>&amp;Save Input file... (ctrl+S)</string>
+       </property>
+       <property name="shortcut">
+        <string>Ctrl+S</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnHelp">
+       <property name="text">
+        <string>&amp;Help (F1)</string>
+       </property>
+       <property name="shortcut">
+        <string>F1</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
