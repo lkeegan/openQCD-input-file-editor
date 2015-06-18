@@ -1,4 +1,2 @@
-# openQCD-gui
-openQCD input file editor
-
-Allows the creation and editing of openQCD input files using a GUI.
+# openQCD-input-file-editor
+An openQCD input file editor with a graphical user interface.
