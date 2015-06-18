@@ -21,12 +21,12 @@
 import sys
 import webbrowser 
 from PyQt4 import QtCore, QtGui, Qt
-from gui import Ui_Form
+from gui.gui import Ui_Form
 import StringIO
 import ConfigParser
 
-import consistency
-import utils
+import modules.consistency as consistency
+import modules.utils as utils
 
 #Class for validating user input as integer
 class MyIntValidator(Qt.QIntValidator):
