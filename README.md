@@ -6,3 +6,5 @@ Includes multiple choice options for parameters whenever possible, and performs 
 Requires Python 2.7 and PyQt4.
 
 Still in beta - comments / bug reports very welcome!
+
+Thanks to Isabel Campos and Martin Luscher for their help and comments.
