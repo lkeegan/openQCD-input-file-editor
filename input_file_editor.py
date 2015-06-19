@@ -57,7 +57,7 @@ class MainGUI(QtGui.QWidget):
 
       #setup basic consistency checks, e.g beta must be a positive double, RNG seed must be a positive integer, etc.
       #list of text fields that have to be positive doubles
-      self.listDoubleFields=[self.ui.Lattice_parameters____beta,self.ui.Trajectory_length____tau,self.ui.Wilson_flow____eps,self.ui.Solver____res, self.ui.Deflation_subspace_generation____kappa, self.ui.Deflation_subspace_generation____mu, self.ui.Deflation_projection____res, self.ui.Deflation_update_scheme____dtau,  self.ui.Boundary_conditions____cF,   self.ui.Boundary_conditions____cG,   self.ui.Boundary_conditions____cFprime,   self.ui.Boundary_conditions____cGprime]
+      self.listDoubleFields=[self.ui.Lattice_parameters____beta,self.ui.HMC_parameters____tau,self.ui.Wilson_flow____eps,self.ui.Solver____res, self.ui.Deflation_subspace_generation____kappa, self.ui.Deflation_subspace_generation____mu, self.ui.Deflation_projection____res, self.ui.Deflation_update_scheme____dtau,  self.ui.Boundary_conditions____cF,   self.ui.Boundary_conditions____cG,   self.ui.Boundary_conditions____cFprime,   self.ui.Boundary_conditions____cGprime]
       #list of text fields that have to be positive integers
       self.listIntegerFields=[self.ui.Random_number_generator____seed,self.ui.MD_trajectories____nth, self.ui.MD_trajectories____ntr,self.ui.MD_trajectories____dtr_log, self.ui.MD_trajectories____dtr_ms, self.ui.MD_trajectories____dtr_cnfg, self.ui.Wilson_flow____nstep, self.ui.Wilson_flow____dnms, self.ui.Solver____nmx, self.ui.Solver____nkv, self.ui.Solver____nmr, self.ui.Solver____ncy, self.ui.Force____ncr, self.ui.Rational____degree, self.ui.Deflation_subspace____Ns, self.ui.Deflation_subspace_generation____ninv, self.ui.Deflation_subspace_generation____nmr, self.ui.Deflation_subspace_generation____ncy, self.ui.Deflation_projection____nkv, self.ui.Deflation_projection____nmx, self.ui.Deflation_update_scheme____nsm]
       #list of text fields that have to be a list of positive doubles
@@ -388,7 +388,6 @@ class MainGUI(QtGui.QWidget):
       list.setDragDropMode(QtGui.QAbstractItemView.DragDrop)
       list.setDefaultDropAction(QtCore.Qt.MoveAction)
       list.setObjectName(strLevel+"____forces")
-      var="ncr"
       if self.config.has_option("Level "+str(self.MDIntLevels-1),"forces"):
          s = str(self.config.get("Level "+str(self.MDIntLevels-1),"forces"))
          for i in s.split():
