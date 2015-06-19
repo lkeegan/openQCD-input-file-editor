@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'gui.ui'
 #
-# Created: Thu Jun 18 12:30:07 2015
+# Created: Fri Jun 19 16:44:24 2015
 #      by: PyQt4 UI code generator 4.11.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -80,12 +80,12 @@ class Ui_Form(object):
         self.lbl0_17 = QtGui.QLabel(self.groupBox_4)
         self.lbl0_17.setObjectName(_fromUtf8("lbl0_17"))
         self.formLayout.setWidget(3, QtGui.QFormLayout.LabelRole, self.lbl0_17)
-        self.Trajectory_length____tau = QtGui.QLineEdit(self.groupBox_4)
-        self.Trajectory_length____tau.setInputMethodHints(QtCore.Qt.ImhNone)
-        self.Trajectory_length____tau.setInputMask(_fromUtf8(""))
-        self.Trajectory_length____tau.setMaxLength(128)
-        self.Trajectory_length____tau.setObjectName(_fromUtf8("Trajectory_length____tau"))
-        self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.Trajectory_length____tau)
+        self.HMC_parameters____tau = QtGui.QLineEdit(self.groupBox_4)
+        self.HMC_parameters____tau.setInputMethodHints(QtCore.Qt.ImhNone)
+        self.HMC_parameters____tau.setInputMask(_fromUtf8(""))
+        self.HMC_parameters____tau.setMaxLength(128)
+        self.HMC_parameters____tau.setObjectName(_fromUtf8("HMC_parameters____tau"))
+        self.formLayout.setWidget(3, QtGui.QFormLayout.FieldRole, self.HMC_parameters____tau)
         self.lbl0_19 = QtGui.QLabel(self.groupBox_4)
         self.lbl0_19.setObjectName(_fromUtf8("lbl0_19"))
         self.formLayout.setWidget(4, QtGui.QFormLayout.LabelRole, self.lbl0_19)
@@ -951,7 +951,7 @@ class Ui_Form(object):
         self.Lattice_parameters____beta.setText(_translate("Form", "6.00", None))
         self.lbl0_17.setToolTip(_translate("Form", "can put some relevant info about beta here...", None))
         self.lbl0_17.setText(_translate("Form", "Trajectory Length:", None))
-        self.Trajectory_length____tau.setText(_translate("Form", "3.00", None))
+        self.HMC_parameters____tau.setText(_translate("Form", "3.00", None))
         self.lbl0_19.setToolTip(_translate("Form", "can put some relevant info about beta here...", None))
         self.lbl0_19.setText(_translate("Form", "Thermalisation Trajectories:", None))
         self.MD_trajectories____nth.setText(_translate("Form", "320", None))

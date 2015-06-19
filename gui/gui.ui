@@ -150,7 +150,7 @@
                </widget>
               </item>
               <item row="3" column="1">
-               <widget class="QLineEdit" name="Trajectory_length____tau">
+               <widget class="QLineEdit" name="HMC_parameters____tau">
                 <property name="inputMethodHints">
                  <set>Qt::ImhNone</set>
                 </property>
