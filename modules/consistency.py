@@ -1,80 +1,91 @@
-# Input file editor for openQCD
-# https://github.com/lkeegan/openQCD-input-file-editor
-# http://luscher.web.cern.ch/luscher/openQCD
-#
-# Consistency checks module
-#
+"""
+Input file editor for openQCD
+https://github.com/lkeegan/openQCD-input-file-editor
+http://luscher.web.cern.ch/luscher/openQCD
+
+Consistency checks module
+"""
 
 
-def isIntegerMultiple(field, unitfield, message):
-    # If field is not integer multiple of unitfield,
-    # make field RED with tooltip error message
-    try:
-        remainder = int(field.text()) % int(unitfield.text())
-    except:
-        showConsistency(field, message, False)
-        return 1
+def is_integer_multiple(field, unitfield, message):
+    """
+    If contents of `field` is not integer multiple of contents of `unitfield`,
+    make `field` RED with tooltip caption `message` & return 1.
+    Otherwise return 0.
+    """
+    remainder = int(field.text()) % int(unitfield.text())
     if remainder > 0:
-        showConsistency(field, message, False)
+        _show_consistency(field, message, False)
         return 1
     else:
-        showConsistency(field, message, True)
+        _show_consistency(field, message, True)
         return 0
 
 
-def isPositiveDouble(field, message):
-    # If field is not a positive double,
-    # make field RED with tooltip error message
+def is_positive_double(field, message):
+    """
+    If contents of `field` is not a positive double,
+    make `field` RED with tooltip caption `message` & return 1.
+    Otherwise return 0.
+    """
     try:
         if float(field.text()) > 0:
-            showConsistency(field, message, True)
+            _show_consistency(field, message, True)
             return 0
         else:
             raise ValueError
     except ValueError:
-        showConsistency(field, message, False)
+        _show_consistency(field, message, False)
         return 1
 
 
-def isListOfPositiveDoubles(field, message):
-    # If field is not a positive double,
-    # make field RED with tooltip error message
+def is_list_of_positive_doubles(field, message):
+    """
+    If contents of `field` is not a list of positive doubles,
+    make `field` RED with tooltip caption `message` & return 1.
+    Otherwise return 0.
+    """
     field.setText(str(field.text()).replace(",", " "))
     for txt in str(field.text()).split():
         try:
             if float(txt) >= 0:
-                showConsistency(field, message, True)
+                _show_consistency(field, message, True)
             else:
                 raise ValueError
         except ValueError:
-            showConsistency(field, message, False)
+            _show_consistency(field, message, False)
             return 1
     return 0
 
 
-def isListOfNPositiveInts(field, n, message):
-    # If field is not a list of n positive integers,
-    # make field RED with tooltip error message
+def is_list_of_n_positive_integers(field, num, message):
+    """
+    If contents of `field` is not a list of `num` positive integers,
+    make `field` RED with tooltip caption `message` & return 1.
+    Otherwise return 0.
+    """
     field.setText(str(field.text()).replace(",", " "))
     try:
-        if len(str(field.text()).split()) != 4:
+        if len(str(field.text()).split()) != num:
             raise ValueError
         for txt in str(field.text()).split():
             if float(txt) % int(txt) == 0:
-                showConsistency(field, message, True)
+                _show_consistency(field, message, True)
             else:
                 raise ValueError
     except ValueError:
-        showConsistency(field, message, False)
+        _show_consistency(field, message, False)
         return 1
     return 0
 
 
-def showConsistency(field, message, isconsistent):
-    # If inconsistent == False,
-    # make text field RED with tooltip error message,
-    # otherwise normal colour&no tooltip message
-    if isconsistent is True:
+def _show_consistency(field, message, is_consistent):
+    """
+    If `is_consistent` is false,
+    make `field` RED with tooltip caption `message`.
+    Otherwise reset colour and tooltip caption of `field` to default values.
+    """
+    if is_consistent is True:
         field.setStyleSheet("")
         field.setToolTip("")
     else:
