@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """
 Input file editor for openQCD
 https://github.com/lkeegan/openQCD-input-file-editor
@@ -34,16 +33,15 @@ Requires Python 2.7 and PyQt4
 # parameter is removed from the input file
 """
 
-import sys
 from PyQt4 import QtCore
 from PyQt4 import QtGui
 from PyQt4 import Qt
-from gui.gui import Ui_Form
+from gui import Ui_Form
 import StringIO
 import ConfigParser
 
-import modules.consistency as consistency
-import modules.utils as utils
+import consistency
+import utils
 
 
 class StrictIntValidator(Qt.QIntValidator):
@@ -699,8 +697,3 @@ class MainGUI(QtGui.QWidget):
         if fname:
             with open(fname, 'w') as fil:
                 fil.write(utils.generate_input_file(self))
-
-if __name__ == "__main__":
-    A = MainGUI()
-    A.show()
-    sys.exit(QtGui.QApplication(sys.argv).exec_())
