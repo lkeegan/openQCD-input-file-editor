@@ -7,4 +7,4 @@ Requires Python 2.7 and PyQt4.
 
 Still in beta - comments / bug reports very welcome!
 
-Thanks to Isabel Campos and Martin Lüscher for their help and comments.
+Thanks to Isabel Campos and Martin Lüscher for their help and comments. Also to Enol Fernández and Álvaro López García for Python advice.
