@@ -419,6 +419,7 @@ def set_var_all(form):
 
 def help(self):
     """
-    Show help, currently just a pdf from the openQCD documentation
+    Show wiki page on github
     """
-    webbrowser.open("doc/parms.pdf")
+    url = "https://github.com/lkeegan/openQCD-input-file-editor/wiki"
+    webbrowser.open(url)
