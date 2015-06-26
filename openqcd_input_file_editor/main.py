@@ -120,7 +120,7 @@ class MainGUI(QtGui.QWidget):
         # list of text fields that have to be a list of positive doubles
         self.list_dbl_fields_list = [self.ui.Lattice_parameters____kappa,
                                      self.ui.HMC_parameters____mu,
-                                     self.ui.Rational____range,]
+                                     self.ui.Rational____range]
 
         # Force these input fields to be integers
         for field in self.list_int_fields:
