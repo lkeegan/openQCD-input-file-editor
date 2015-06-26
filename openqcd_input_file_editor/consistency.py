@@ -58,6 +58,24 @@ def is_list_of_positive_doubles(field, message):
     return 0
 
 
+def is_list_of_n_doubles(field, num, message):
+    """
+    If contents of `field` is not a list of n doubles,
+    make `field` RED with tooltip caption `message` & return 1.
+    Otherwise return 0.
+    """
+    field.setText(str(field.text()).replace(",", " "))
+    try:
+        if len(str(field.text()).split()) != num:
+            raise ValueError
+        for txt in str(field.text()).split():
+            float(txt)
+        _show_consistency(field, message, True)
+    except ValueError:
+        _show_consistency(field, message, False)
+        return 1
+    return 0
+
 def is_list_of_n_positive_integers(field, num, message):
     """
     If contents of `field` is not a list of `num` positive integers,

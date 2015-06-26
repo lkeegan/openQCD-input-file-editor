@@ -120,9 +120,7 @@ class MainGUI(QtGui.QWidget):
         # list of text fields that have to be a list of positive doubles
         self.list_dbl_fields_list = [self.ui.Lattice_parameters____kappa,
                                      self.ui.HMC_parameters____mu,
-                                     self.ui.Rational____range,
-                                     self.ui.Boundary_conditions____phi,
-                                     self.ui.Boundary_conditions____phiprime]
+                                     self.ui.Rational____range,]
 
         # Force these input fields to be integers
         for field in self.list_int_fields:
@@ -626,6 +624,14 @@ class MainGUI(QtGui.QWidget):
             self.ui.Deflation_subspace____bs,
             4,
             "Must be a list of 4 positive integers, e.g. 4 6 6 4")
+        consistent += consistency.is_list_of_n_doubles(
+            self.ui.Boundary_conditions____phi,
+            2,
+            "Must be a list of 2 doubles, e.g. 0.13 -0.63")
+        consistent += consistency.is_list_of_n_doubles(
+            self.ui.Boundary_conditions____phiprime,
+            2,
+            "Must be a list of 2 doubles, e.g. 0.13 -0.63")
         if consistent > 0:
             self.ui.btnSave.setEnabled(False)
         else:
