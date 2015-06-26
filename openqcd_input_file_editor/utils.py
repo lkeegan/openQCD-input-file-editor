@@ -366,7 +366,7 @@ def get_solver(form):
     # first read from config what kind of solver it is
     get_var_cmb(form.ui.Solver____solver, form)
     # then disable/enable comboboxes based on this
-    form.changecmbSolver()
+    form.change_cmb_solver()
     # finally read from config all the fields
     for txt in form.ui.tabSolvers.findChildren(QtGui.QLineEdit):
         get_var_txt(txt, form)
@@ -391,7 +391,7 @@ def get_action(index, form):
     # first read from config what kind of action it is
     get_var_cmb(form.ui.Action____action, form)
     # then disable/enable comboboxes based on the action
-    form.changecmbAction()
+    form.change_cmb_action()
     # finally read from config all the enabled comboboxes
     # TODO: replace below with call to children on current tab instead of ALL
     get_var_all(form)
