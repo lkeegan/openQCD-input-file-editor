@@ -36,12 +36,12 @@ Requires Python 2.7 and PyQt4
 from PyQt4 import QtCore
 from PyQt4 import QtGui
 from PyQt4 import Qt
-from gui import Ui_Form
+from openqcd_input_file_editor.gui import Ui_Form
 import StringIO
 import ConfigParser
 
-import consistency
-import utils
+import openqcd_input_file_editor.consistency as consistency
+import openqcd_input_file_editor.utils as utils
 
 
 class StrictIntValidator(Qt.QIntValidator):
@@ -307,6 +307,7 @@ class MainGUI(QtGui.QWidget):
         Enable/disable relevant fields for current choice of action
         """
         if self.ui.Action____action.currentIndex() in [4, 5]:
+            # RAT fermion action
             self.ui.Action____imuX0.setEnabled(False)
             self.ui.Action____imuX1.setEnabled(False)
             self.ui.Action____ispX1.setEnabled(False)
@@ -314,14 +315,17 @@ class MainGUI(QtGui.QWidget):
             self.ui.Action____iratX1.setEnabled(True)
             self.ui.Action____iratX2.setEnabled(True)
         else:
+            #TM fermion action
             self.ui.Action____iratX0.setEnabled(False)
             self.ui.Action____iratX1.setEnabled(False)
             self.ui.Action____iratX2.setEnabled(False)
             if self.ui.Action____action.currentIndex() in [0, 2]:
+                # 1 flavour fermion action
                 self.ui.Action____imuX0.setEnabled(True)
                 self.ui.Action____imuX1.setEnabled(False)
                 self.ui.Action____ispX1.setEnabled(False)
             else:
+                # 2 flavour fermion action
                 self.ui.Action____imuX0.setEnabled(True)
                 self.ui.Action____imuX1.setEnabled(True)
                 self.ui.Action____ispX1.setEnabled(True)
@@ -591,9 +595,11 @@ class MainGUI(QtGui.QWidget):
         t_err = "Must be a list of positive doubles (e.g. 2.123 5e-3 0.1243)"
         for txt in self.list_dbl_fields_list:
             consistent += consistency.is_list_of_positive_doubles(txt, t_err)
+
         t_err = "Must be a positive double (e.g. 0.165, or 1.3e-1)"
         for txt in self.list_dbl_fields:
             consistent += consistency.is_positive_double(txt, t_err)
+
         t_err = " must be an integer multiple of "
         consistent += consistency.is_integer_multiple(
             self.ui.Wilson_flow____nstep,
@@ -607,6 +613,7 @@ class MainGUI(QtGui.QWidget):
             self.ui.MD_trajectories____dtr_cnfg,
             self.ui.MD_trajectories____dtr_ms,
             "Configuration save frequency" + t_err + "measurement freqency")
+
         t_err = " must be an integer multiple of configuration save freqency"
         consistent += consistency.is_integer_multiple(
             self.ui.MD_trajectories____nth,
@@ -616,22 +623,27 @@ class MainGUI(QtGui.QWidget):
             self.ui.MD_trajectories____ntr,
             self.ui.MD_trajectories____dtr_cnfg,
             "Number of MD trajectories" + t_err)
+
         consistent += consistency.is_list_of_n_positive_integers(
             self.ui.SAP____bs,
             4,
             "Must be a list of 4 positive integers, e.g. 4 6 6 4")
+
         consistent += consistency.is_list_of_n_positive_integers(
             self.ui.Deflation_subspace____bs,
             4,
             "Must be a list of 4 positive integers, e.g. 4 6 6 4")
+
         consistent += consistency.is_list_of_n_doubles(
             self.ui.Boundary_conditions____phi,
             2,
             "Must be a list of 2 doubles, e.g. 0.13 -0.63")
+
         consistent += consistency.is_list_of_n_doubles(
             self.ui.Boundary_conditions____phiprime,
             2,
             "Must be a list of 2 doubles, e.g. 0.13 -0.63")
+
         if consistent > 0:
             self.ui.btnSave.setEnabled(False)
         else:

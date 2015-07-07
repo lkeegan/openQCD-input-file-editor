@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='openQCD-input-file-editor',
-      version='0.1',
+      version='0.2',
       description='An input file editor with a graphical user interface for the openQCD lattice QCD simulation program',
       url='http://lkeegan.github.io/openQCD-input-file-editor/',
       author='Liam Keegan',
