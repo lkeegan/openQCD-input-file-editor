@@ -1,4 +1,4 @@
-# openQCD Input-file Editor
+# openQCD Input-file Editor [![Code Health](https://landscape.io/github/lkeegan/openQCD-input-file-editor/master/landscape.svg?style=flat)](https://landscape.io/github/lkeegan/openQCD-input-file-editor/master)
 
 An input file editor with a graphical user interface for the [openQCD](http://luscher.web.cern.ch/luscher/openQCD) lattice QCD simulation program. Allows editing of existing input files or creation of new ones.
 
